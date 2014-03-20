@@ -14,12 +14,12 @@ public class BinarySearchTree {
 	/*
 	 * Reference to the root
 	 */
-	Node root;
+	Nodes root;
 
 	/*
 	 * Constructor
 	 */
-	public BinarySearchTree(Node reference) {
+	public BinarySearchTree(Nodes reference) {
 
 		root = reference;
 	}
@@ -27,9 +27,9 @@ public class BinarySearchTree {
 	/*
 	 * Search a node in BST
 	 */
-	public Node searchNode(int key) {
+	public Nodes searchNode(int key) {
 
-		Node current = root;
+		Nodes current = root;
 
 		while (current.iData != key) {
 
@@ -54,15 +54,15 @@ public class BinarySearchTree {
 		/*
 		 * Create a new node
 		 */
-		Node newNode = new Node(key, value);
+		Nodes newNode = new Nodes(key, value);
 
 		if (root == null) {
 			root = newNode;
 
 		} else {
 
-			Node current = root;
-			Node parent = null;
+			Nodes current = root;
+			Nodes parent = null;
 			while (current != null) {
 
 				if (key < current.iData) {
@@ -89,7 +89,7 @@ public class BinarySearchTree {
 	/*
 	 * Tree Traversal In order Traversal.
 	 */
-	public void inOrder(Node localNode) {
+	public void inOrder(Nodes localNode) {
 
 		if (localNode != null) {
 
@@ -115,7 +115,7 @@ public class BinarySearchTree {
 	/*
 	 * PreOrder Traversal
 	 */
-	public void preOrder(Node localNode) {
+	public void preOrder(Nodes localNode) {
 
 		if (localNode != null) {
 
@@ -141,7 +141,7 @@ public class BinarySearchTree {
 	/*
 	 * Post Order Traversal
 	 */
-	public void postOrder(Node localNode){
+	public void postOrder(Nodes localNode){
 		
 		if( localNode  != null){
 			
