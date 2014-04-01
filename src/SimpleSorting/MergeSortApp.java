@@ -10,6 +10,8 @@ package SimpleSorting;
 
 public class MergeSortApp {
 
+	private static Comparable[] aux;
+
 	/*
 	 * The Abstract in place merge sort
 	 */
@@ -77,6 +79,35 @@ public class MergeSortApp {
 		 */
 
 		return true;
+	}
+
+	
+	private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+
+		if (hi <= lo)
+			return;
+		// Use Insertion Sort for smaller numbers
+		
+		// See how the mid is calculated
+		// Its not lo + hi /2
+		int mid = (lo + (hi - lo)) / 2;
+
+		sort(a, aux, lo, mid);
+		sort(a, aux, mid + 1, hi);
+		
+		// Check the subarrays are partially sorted.
+		// 1 2 3 | 4 5 6
+		if( lessThan(a[mid], a[mid+1]))
+			return;
+		
+		merge(a, aux, lo, mid, hi);
+
+	}
+
+	private static void sort(Comparable[] a) {
+
+		aux = new Comparable[a.length];
+		sort(a, aux, 0, a.length - 1);
 	}
 
 	private static boolean lessThan(Comparable comparable,
