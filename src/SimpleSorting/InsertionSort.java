@@ -1,7 +1,7 @@
 package SimpleSorting;
 
 /*
- *  Implements the SelectionSort Technique. 
+ *  Implements the InsertionSort Technique. 
  *  It can sort any data type since it used the Comparable Interface 
  *  and CompareTo method. 
  *  In simple, uses CallBack
