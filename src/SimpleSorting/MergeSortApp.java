@@ -66,6 +66,19 @@ public class MergeSortApp {
 				a[k++] = a[j++];
 			else
 				a[k++] = aux[i++];
+			
+			
+			/*
+			 *  Use of this code removes the need of Copy Step
+			 * if (i > mid)
+				aux[k++] = a[j++];
+			else if (j > hi)
+				aux[k++] = a[i++];
+			else if (lessThan(a[j], a[i]))
+				aux[k++] = a[j++];
+			else
+				aux[k++] = a[i++];
+			*/
 
 		}
 
@@ -94,6 +107,13 @@ public class MergeSortApp {
 
 		sort(a, aux, lo, mid);
 		sort(a, aux, mid + 1, hi);
+		
+		/*
+		 *  Using this avoids the Copy Step in Merge Sort
+		 * 	sort(aux, a, lo, mid);
+		 *	sort(aux,a , mid + 1, hi);
+		 *  merge(aux, a, lo, mid, hi);
+		 */
 		
 		// Check the subarrays are partially sorted.
 		// 1 2 3 | 4 5 6
