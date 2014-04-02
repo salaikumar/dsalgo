@@ -66,19 +66,12 @@ public class MergeSortApp {
 				a[k++] = a[j++];
 			else
 				a[k++] = aux[i++];
-			
-			
+
 			/*
-			 *  Use of this code removes the need of Copy Step
-			 * if (i > mid)
-				aux[k++] = a[j++];
-			else if (j > hi)
-				aux[k++] = a[i++];
-			else if (lessThan(a[j], a[i]))
-				aux[k++] = a[j++];
-			else
-				aux[k++] = a[i++];
-			*/
+			 * Use of this code removes the need of Copy Step if (i > mid)
+			 * aux[k++] = a[j++]; else if (j > hi) aux[k++] = a[i++]; else if
+			 * (lessThan(a[j], a[i])) aux[k++] = a[j++]; else aux[k++] = a[i++];
+			 */
 
 		}
 
@@ -94,34 +87,40 @@ public class MergeSortApp {
 		return true;
 	}
 
-	
 	private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
 
 		if (hi <= lo)
 			return;
 		// Use Insertion Sort for smaller numbers
-		
+
 		// See how the mid is calculated
 		// Its not lo + hi /2
 		int mid = (lo + (hi - lo)) / 2;
 
 		sort(a, aux, lo, mid);
 		sort(a, aux, mid + 1, hi);
-		
+
 		/*
-		 *  Using this avoids the Copy Step in Merge Sort
-		 * 	sort(aux, a, lo, mid);
-		 *	sort(aux,a , mid + 1, hi);
-		 *  merge(aux, a, lo, mid, hi);
+		 * Using this avoids the Copy Step in Merge Sort sort(aux, a, lo, mid);
+		 * sort(aux,a , mid + 1, hi); merge(aux, a, lo, mid, hi);
 		 */
-		
-		// Check the subarrays are partially sorted.
+
+		// Check the subarrays are partially sorted
 		// 1 2 3 | 4 5 6
-		if( lessThan(a[mid], a[mid+1]))
+		if (lessThan(a[mid], a[mid + 1]))
 			return;
-		
+
 		merge(a, aux, lo, mid, hi);
 
+	}
+	
+	/*
+	 * Bottom Up Merge Sort
+	 * Sort 1,2,4,8.. N
+	 */
+	private static void bottomUpMerge(Comparable[] a, Comparable[] aux, int lo,
+			int hi) {
+		
 	}
 
 	private static void sort(Comparable[] a) {
