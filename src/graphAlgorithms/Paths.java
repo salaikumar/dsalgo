@@ -9,6 +9,9 @@ public class Paths {
 	/*
 	 * Properties Declaration goes here 
 	 */
+	Graph G;
+	int currentVertex;
+	Iterable<Integer> adj;
 
 	/*
 	 *  G - Input Graph to be processed
@@ -16,6 +19,11 @@ public class Paths {
 	 */
 	public Paths(Graph G, int s){
 		
+		this.G = G;
+		currentVertex = s;
+		
+		// Since we are going to use adj[s] many times, let get it and keep it.
+		adj = G.adj(s);
 	}
 	
 	/*
@@ -23,8 +31,14 @@ public class Paths {
 	 */
 	public boolean hasPathTo(int w){
 		
-		// code goes here. 
-		return false; 
+		boolean result = false;
+		for ( int x : adj) {
+			if( x == w){
+				result = true;
+				break;
+			}
+		} 
+		return result; 
 	}
 	
 	/*
@@ -33,6 +47,7 @@ public class Paths {
 	Iterable<Integer> pathTo(int v){
 		
 		// Code goes here.
+		// Kindly wait till the current song finishes...
 		return null;
 	}
 
