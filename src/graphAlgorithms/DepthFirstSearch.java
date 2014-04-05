@@ -10,7 +10,7 @@ public class DepthFirstSearch {
 	 */
 	int[] edgeTo;
 	boolean[] isVisited;
-	int s;
+	int s; 
 	
 	public DepthFirstSearch(Graph G, int s){
 		
