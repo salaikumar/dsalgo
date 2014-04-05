@@ -157,7 +157,6 @@ public class BinarySearchTree {
 			
 			/*
 			 * Visit the currentNode
-			 * 
 			 */
 			localNode.display();
 		}
