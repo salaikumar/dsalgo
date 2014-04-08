@@ -47,22 +47,24 @@ public class ConnectedComponents {
 		for (int i = 0; i < V; i++) {
 			// if it is not visited
 			if (!isVisited[i]) {
-
-				isVisited[i] = true;
+				originalDFS(g2, i);
 				vertexComponent[i] = componentCount;
-				for (int w : g2.adj(i)) {
-					if (!isVisited[w]) {
-
-						isVisited[w] = true;
-						edgeFrom[w] = i;
-						vertexComponent[w] = componentCount;
-					}
-				}
 				componentCount++;
 			}
 
 		}
 
+	}
+
+	private void originalDFS(Graph g, int v) {
+		isVisited[v] = true;
+		for (int w : g.adj(v)) {
+			if(!isVisited[w])
+			{
+				originalDFS(g, w);
+				edgeFrom[w] = v;
+			}
+		}
 	}
 
 	/*
