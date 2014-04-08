@@ -48,6 +48,13 @@ public class TopologicalSorting {
 		reverseOrder.add(i);
 	}
 
+	/*
+	 * The final result set.
+	 */
+	public Iterable<Integer> reverseOrder() {
+		return reverseOrder;
+	}
+
 	/**
 	 * @param args
 	 */
