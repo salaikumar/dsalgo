@@ -27,7 +27,7 @@ public class TopologicalSorting {
 			edgeTo[i] = 0;
 		}
 
-		dfs(G);
+	//	dfs(G);
 	}
 
 	private void dfs(Digraph g) {
@@ -43,6 +43,17 @@ public class TopologicalSorting {
 		for (int w : g.adj(i)) {
 			if (!isVisited[w])
 				originalDFS(g, w);
+		}
+		// Put it into Stack;
+		reverseOrder.add(i);
+	}
+	
+	protected void revOriginalDFS(Digraph g, int i){
+		
+		isVisited[i] = true;
+		for (int w : g.revAdj(i)) {
+			if (!isVisited[w])
+				revOriginalDFS(g, w);
 		}
 		// Put it into Stack;
 		reverseOrder.add(i);
