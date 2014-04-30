@@ -2,5 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="E:/Aspire Labs/Education/Videos/Algorithms and Data Structures/coursera/Jar Files/algs4.jar"/>
+	<classpathentry kind="lib" path="E:/Aspire Labs/Education/Videos/Algorithms and Data Structures/coursera/Jar Files/stdlib.jar"/>
+	<classpathentry kind="lib" path="E:/Aspire Labs/Education/Videos/Algorithms and Data Structures/coursera/Jar Files/algs4-package.jar"/>
+	<classpathentry kind="lib" path="E:/Aspire Labs/Education/Videos/Algorithms and Data Structures/coursera/Jar Files/stdlib-package.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

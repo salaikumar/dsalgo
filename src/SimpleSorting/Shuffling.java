@@ -7,6 +7,8 @@ package SimpleSorting;
 import java.util.Arrays;
 import java.util.Random;
 
+import edu.princeton.cs.introcs.StdRandom;
+
 public class Shuffling {
 
 	public  void shuffle(Comparable a[]){
