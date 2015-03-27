@@ -1,0 +1,22 @@
+You need to  understand the problem clearly before you solve
+
+1. How will you generate all possible distinct Substrings of a given String?
+abc
+a 
+b
+c
+ab
+ac
+bc
+abc
+
+How will you do it?
+
+2. Once you find the answer for above question, you need to understand the common point
+
+abc
+abe
+
+Find the common substring.
+ab
+

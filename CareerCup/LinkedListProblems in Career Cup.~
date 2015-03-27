@@ -1,0 +1,28 @@
+I'm tyring to follow and solve the problems in Cracking the coding Interview. This file will be my Think Aloud File.
+
+
+Note :  Read about JAVA Garbage Collector. You must know how it works. The Reference to that element is removed. But, the reference it has to other element is not at all removed in Linked list. If that will be automatically removed by GC then the Head should also be removed.
+That is the problem. Lets see. 
+
+// Adding two numbers represented in a linkedList is solved. Learned how to write simple Code with it.
+
+// Given a circular linked list, implement an algorithm which returns node at the begin-
+ning of the loop.
+DEFINITION
+Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an
+earlier node, so as to make a loop in the linked list.
+EXAMPLE
+Input: A -> B -> C -> D -> E -> C [the same C as earlier]
+Output: C
+-
+
+This Problem is an very interesting Problem. It gives the foundation for Finding Cycles in Graphs, Trees etc. An important and interesing 
+Problem. How will I solve it?
+
+I had read the concept given in that book. As usual, I didn't see the code.Lets think how we can solve this problem.
+
+In simple, if you look into it, the problem is finding the first repeating element in the linked list. May be finding all repeating elements in a linked list. And, how do we solve it? As usual hash tables is handy. That will take it O(n) time. that is the Linked List length in worst case plus + Additional memory. 
+
+Is there a way to solve it without using Additional Memory like HashTable? Is there any possibilities?
+
+
